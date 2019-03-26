@@ -1,5 +1,5 @@
-# docker build --tag forexliga/php7:0.1 .
-# docker run -it --rm forexliga/php7:0.1 bash
+# docker build --tag dadyzeus/php7:0.1 --tag dadyzeus/php7:latest .
+# docker run -it --rm dadyzeus/php7:0.1 bash
 FROM ubuntu
 MAINTAINER SungYong EOM <bluei@blueiblog.com>
 
@@ -17,3 +17,7 @@ RUN apt install -y gcc make telnet whois vim git gettext cron mysql-client iputi
 RUN apt install -y php php-cli php-mysql php-pear php-mbstring php-curl php-gd php-imagick php-memcache php-xmlrpc php-geoip
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+RUN rm composer-setup.php
+RUN mkdir /php
+
+VOLUME ["/php"]
