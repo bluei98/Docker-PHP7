@@ -20,4 +20,4 @@ RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 RUN rm composer-setup.php
 RUN mkdir /php
 
-VOLUME ["/php"]
+WORKDIR /php
