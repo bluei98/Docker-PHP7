@@ -1,5 +1,5 @@
-# docker build --tag forexliga/php:0.1 .
-# docker run -it --rm forexliga/php:0.1 bash
+# docker build --tag forexliga/php7:0.1 .
+# docker run -it --rm forexliga/php7:0.1 bash
 FROM ubuntu
 MAINTAINER SungYong EOM <bluei@blueiblog.com>
 
